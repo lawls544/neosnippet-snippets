@@ -38,6 +38,12 @@ abbr        try catch
         ${3}
     }
 
+snippet     for
+abbr        for () {}
+    for (${1} ${2} = ${3}; $2 < ${4}; $2++) {
+        ${0:TARGET}
+    }
+
 # range based for ( C++11 feature )
 snippet     for_CPP11
 abbr        for (:) {}
