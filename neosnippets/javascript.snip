@@ -88,3 +88,17 @@ options head
         ${0:TARGET}
     );
   }
+
+snippet reactClass
+abbr    rclass
+    var React = require('react');
+
+    var ${0:TARGET} = React.createClass({
+        render: function() {
+            return (
+
+            )
+        }
+    })
+
+    module.exports = ${0};
