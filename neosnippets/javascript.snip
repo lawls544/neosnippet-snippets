@@ -138,6 +138,8 @@ snippet moduleTest
   import Flux from '${1}'
   ${0:TARGET}
 
+  const { expect } = chai
+
   chai.use(sinonChai)
 
   describe('${2}', () => {
