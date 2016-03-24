@@ -103,7 +103,7 @@ abbr    rclass
 
   export default $1;
 
-snippet nuclearStore
+snippet store
 abbr    store
   import { Store, toImmutable } from 'nuclear-js'
 
@@ -119,3 +119,30 @@ abbr    store
   })
   
   export default $1
+
+snippet describe
+  describe('${1}', () => {
+    ${0:TARGET}
+  })
+
+snippet it
+  it('${1}', () => {
+    ${0:TARGET}
+  })
+
+snippet moduleTest
+  import chai from 'chai'
+  import sinon from 'sinon'
+  import sinonChai from 'sinon-chai'
+
+  import Flux from '${1}'
+  ${0:TARGET}
+
+  chai.use(sinonChai)
+
+  describe('${2}', () => {
+    afterEach(() => {
+      Flux.reset()
+    })
+
+  })
